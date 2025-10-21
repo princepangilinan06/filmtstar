@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Films | STARFILMS</title>
+  <link href="https://fonts.googleapis.com/css2?family=Gantari:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+
+
+
+</head>
+
+<body>
+
+  
+  <header class="navbar">
+    <div class="logo"><a href="index.html">⭐ STARFILMS</a></div>
+
+
+    <nav>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Films.html">Films</a></li>
+        <li><a href="Profile.html">Profile</a></li>
+        <li><a href="About.html">About Us</a></li>
+        <li><a href="LogPage.html">Log In / Sign Up</a></li>
+      </ul>
+
+     
+      <button class="hamburger" aria-label="Open menu" aria-expanded="false">
+        <span class="hamburger-box">
+          <span class="hamburger-inner"></span>
+        </span>
+      </button>
+    </nav>
+  </header>
+
+  <div class="page-container">
+    <main class="main-content">
+      <section class="logo-section">
+        <div class="logo-container">
+          <h1 class="logo-text">
+            <span class="text-gold">⭐STAR</span><span class="text-white">FILMS</span>
+          </h1>
+        </div>
+      </section>
+
+      <p class="tagline">Your movie journal, one star at a time.</p>
+      <img src="images/BACKGROUND.png" alt="movie posters">
+
+      <section class="login-section">
+        <div class="login-container">
+          <form class="login-form">
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" class="form-input" placeholder="Value">
+            </div>
+
+            <div class="form-group">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" id="password" class="form-input" placeholder="Value">
+            </div>
+
+<button type="submit" class="btn-primary">   <a href="index.html">Sign In</a></button>
+          </form>
+        </div>
+
+    
+      </section>
+
+      <section class="about-section">
+        <h2 class="about-title">
+          <span class="text-gold">⭐STAR</span><span class="text-white">FILMS</span>
+        </h2>
+        <p class="about-text">
+          STARFILM is a personal movie journal and social platform where film lovers can rate movies,
+          share their thoughts, and keep track of every film they've watched. It's designed to help you
+          relive the movies you once loved, treasure the ones you'll always hold close, and discover new stories
+          through community recommendations. More than just a review site, STARFILM is a growing community of fans
+          who turn movies into lasting memories and conversations.
+        </p>
+      </section>
+    </main>
+
+   <footer>
+    <div class="footer-container">
+      <div class="footer-logo">⭐ STARFILMS</div>
+      <p>Your movie journal, one star at a time.</p>
+
+      <div class="footer-links">
+        <h4>Quick Hover</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="Films.html">Films</a></li>
+          <li><a href="Profile.html">Profile</a></li>
+          <li><a href="About.html">About Us</a></li>
+          <li><a href="LogPage.html">Log In / Sign Up</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-connect">
+        <h4>Connect With Us</h4>
+        <p>Email: <a href="mailto:starfilm@gmail.com">starfilm@gmail.com</a></p>
+        <p>📞 <a href="tel:+639667443932">+63 966-7443-932</a></p>
+        <div class="footer-icon">
+        <a href="https://www.instagram.com/lenrdsixft/?next=%2F"  target="_blank"><img src="images/ig.png" alt="Instagram"></a>
+        <a href="https://www.facebook.com/share/16sWvcX14o/?mibextid=wwXIfr" target="_blank"><img src="images/fb.png" alt="Facebook"></a>
+          </div>
+      </div>
+    </div>
+    <p class="footer-note">© 2025 STARFILMS. All rights reserved. | Privacy Policy | Terms of Service</p>
+  </footer>
+  </div>
+
+  <script>
+    (function() {
+      const header = document.querySelector('.navbar');
+      const hamburger = document.querySelector('.hamburger');
+      const navLinks = document.querySelector('.nav-links');
+
+      function toggleNav() {
+        const opened = header.classList.toggle('nav-open');
+        hamburger.setAttribute('aria-expanded', opened ? 'true' : 'false');
+      }
+
+      hamburger.addEventListener('click', toggleNav);
+
+      navLinks.addEventListener('click', (e) => {
+        if (e.target.tagName === 'A' && window.innerWidth <= 480) {
+          header.classList.remove('nav-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth > 480) {
+          header.classList.remove('nav-open');
+          hamburger.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
